@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     
+        <p>
+            var x = 6; <br>
+            var y = 15; <br>
+            var z = 4;
+        </p>
+        <h2><a href="../js_001_lecture.html">Назад</a></h2>
+        <script>
+                var x = 6;
+                var y = 15;
+                var z = 4;
+                x += y - x++ * z; // x = -3
+                alert('x += y - x++ * z' + ' результат ' + x);
+                x = 6;
+                y = 15;
+                z = 4;
+                z = --x - y * 5; // z = -70
+                alert('z = --x - y * 5 '+ ' результат ' + z);
+                x = 6;
+                y = 15;
+                z = 4;
+                y = (y/x) + (5%z); // y = 3.5
+                alert('y = (y/x) + (5%z)' + ' результат ' + y);
+                x = 6;
+                y = 15;
+                z = 4;
+                z = x++ + y * 5; // z = 81
+                alert('z = x++ + y * 5'+ ' результат ' + z);
+                x = 6;
+                y = 15;
+                z = 4;
+                x = y - x++ * z; // x = -9
+                alert('x = y - x++ * z' + ' результат ' + x);
+            </script>
+</body>
+</html>

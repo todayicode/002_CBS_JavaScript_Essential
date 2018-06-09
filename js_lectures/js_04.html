@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <h2><a href="../js_001_lecture.html">Назад</a></h2>
+<pre>
+var v;
+var s;
+var r;
+var h;
+v = Math.Pi * r*r *h;
+s = 2*Math.Pi*r (r + h);
+</pre>
+       <script>
+        var v; // объем цилиндра
+        var s; // площадь цилиндра
+        var r; // радиус 
+        var h; // высота 
+        r = prompt('введите радиус цилиндра, см,  r');
+        r = parseInt(r);
+        h = prompt('введите высоту цилиндра, см, h');
+        h = parseInt(h);
+        v = Math.PI * r * r * h;
+        v = Math.round(v);
+        s = 2*Math.PI* r * (r + h);
+        s = Math.round(s);
+        document.write('Объем цилиндра = ' + v + ' см<sup>3</sup>' + '<br>');
+        document.write('Площадь цилиндра = ' +  s + ' см<sup>2</sup>');
+       </script>
+</body>
+</html>
