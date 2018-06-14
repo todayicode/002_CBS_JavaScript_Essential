@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>003_lecture</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h2>Дополнительное задание.</h2>
+                <p class="text-justify">Создайте массив размерностью N элементов, выведите все элементы массива в обратном порядке.</p>
+                <pre><code>
+var arr = [1,2,3,4,5,6,7,8,9,10];
+document.write(arr.reverse());
+                </code></pre>
+            </div>
+            <div class="col-4" id="res-1-1" >
+                    ????
+                </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="row justify-content">
+            <div class="col col-8">
+                <h2>Задание 2</h2>
+                <p class="text-justify">Требуется: создать массив размерностью N элементов, заполнить его произвольными целыми значениями. Вывести наибольшее значение массива, наименьшее значение массива, общую сумму элементов, среднее арифметическое всех элементов, вывести все нечетные значения.</p>
+                </div>
+                <div class="col col-8">
+                    <h5>Создание массива и заполнение целыми значениями.</h5>
+                    <pre><code>
+var arr = Array(20);
+for (var i = 0; i &lt; arr.length; i++ ) {
+    arr[i] = Math.floor(Math.random()*100);
+    }
+                    </code></pre>
+                </div>
+                <div class="col-4" id="res-2-1" >
+                    ????
+                </div>
+                
+                <div class="col-8">
+                    <h5>Наибольшее и наименьшее значение массива arr</h5>
+                    <pre><code>
+arr.sort(function(a, b){return a-b});
+document.write(arr);
+var max = arr[arr.length-1];
+document.write("наибольшее значение массива arr: " + max + "&lt;br&gt;");
+var min = arr[0];
+document.write("наименьшее значение массива arr: " + min + "&lt;br&gt;");
+                    </code></pre>
+                </div>
+                <div class="col-4" id="res-2-2">
+                        ????
+                    </div>
+                <div class="col-8">
+                    <h5>Общая сумма элементов массива.</h5>
+                    <pre><code>
+var sum = 0;
+for (var i = 0; i &lt; arr.length; i++ ) {
+    sum += arr[i];
+    }
+document.write("общая сумма элементов массива arr: " + sum + "&lt;br&gt;");
+                    </code></pre>
+                </div>
+                <div class="col-4" id="res-2-3">
+                        ????
+                    </div>
+                <div class="col-8">
+                    <h5>Среднее арифметическое всех элементов массива</h5>
+                    <pre><code>
+var sum = 0;
+var avr = 0;
+for (var i = 0; i &lt; arr.length; i++ ) {
+    sum += arr[i];
+    }
+avr = Math.round(sum / arr.length);
+document.write("среднее арифметическое всех элементов массива arr: " + avr + "&lt;br&gt;");
+                    </code></pre>
+                </div>
+                <div class="col-4" id="res-2-4">
+                        ????
+                    </div>
+                <div class="col-8">
+                    <h5>Все нечетные значения массива</h5>
+                    <pre><code>
+document.write("все нечетные значения массива arr: " + "&lt;br&gt;");
+for (var i = 0; i &lt; arr.length; i++ ) {
+    if (arr[i]%2 == 0) {
+        continue;
+    }
+    else {
+        document.write(arr[i] + ", ");
+    }
+}
+                    </code></pre>
+                </div>
+                <div class="col-4" id="res-2-5">
+                        ????
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h2>Задание 3</h2>
+                <p class="text-justify">Требуется: создать двумерный массив элементов размерностью 5х5 и заполнить его произвольными целочисленными значениями. По главной диагонали все числа со знаком (-) заменить на 0, а числа со знаком (+) на число 1.</p>
+                <pre><code>
+var arr = [];
+for (var i = 0; i &lt; 5; i++) {
+    arr[i] = [];
+    for (var j = 0; j &lt; 5; j++) {
+        arr[i][j] = Math.floor(Math.random()*20) - 10;
+    }
+}
+var arrMod = arr;
+for (i = 0; i &lt; arr.length; i++) {
+    for (j = 0; j &lt; arr[i].length; j++ ) {
+        if (arr[i][i] &lt;= 0) {
+            arr[i][i] = 0;
+            }
+        else {
+            arr[i][i] = 1;
+            }
+        }
+    }
+console.log(arr);
+                 </code></pre>
+            </div>
+            <div class="col-4" id="res-3-1">
+                    ????
+            </div>
+<script>
+    // Задание 1.1. (Дополнительное задание)
+    var arr = [1,2,3,4,5,6,7,8,9,10]; 
+    document.getElementById('res-1-1').innerHTML = "Result: " + arr.reverse();
+    //Задание 2.1.
+    var arr = Array(20);
+    for (var i = 0; i < arr.length; i++ ) {
+    arr[i] = Math.floor(Math.random()*100);
+    }
+    document.getElementById('res-2-1').innerHTML = "Result: " + arr;
+    //Задание 2.2.
+    arr.sort(function(a, b){return a-b});
+    var max = arr[arr.length-1];
+    var min = arr[0];
+    document.getElementById('res-2-2').innerHTML = "Result: " + "<br>" + "наибольшее значение массива arr: " + max + "<br>" +"наименьшее значение массива arr: " + min + "<br>";
+    //Задание 2.3.
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++ ) {
+        sum += arr[i];
+        }
+    document.getElementById('res-2-3').innerHTML = "Result: " + "<br>" + "общая сумма элементов массива arr: " + sum + "<br>";
+    //Задание 2.4.
+    var sum = 0;
+    var avr = 0;
+    for (var i = 0; i < arr.length; i++ ) {
+         sum += arr[i];
+        }
+    avr = Math.round(sum / arr.length);
+    document.getElementById('res-2-4').innerHTML = "Result: " + "<br>" + "среднее арифметическое всех элементов массива arr: " + avr;
+
+    //Задание 2.5.
+    var odd = "";
+    for (var i = 0; i < arr.length; i++ ) {
+        if (arr[i]%2 == 0) {
+            continue;
+        }
+        else {
+            odd += arr[i] + ", ";
+            document.getElementById('res-2-5').innerHTML = "Result: " + "<br>" + "все нечетные значения массива arr: " + "<br>" + odd;        
+            }
+    }
+    //Задание 3.1.
+    var arr = [];
+    for (var i = 0; i < 5; i++) {
+        arr[i] = [];
+        for (var j = 0; j < 5; j++) {
+            arr[i][j] = Math.floor(Math.random()*20) - 10;
+        }
+    }
+    var arrMod = arr;
+    for (i = 0; i < arr.length; i++) {
+        for (j = 0; j < arr[i].length; j++ ) {
+            if (arr[i][i] <= 0) {
+                arr[i][i] = 0;
+                }
+            else {
+                arr[i][i] = 1;
+                }
+            }
+        }
+console.log(arr);
+document.getElementById('res-3-1').innerHTML = "Result: " + "<br>" + "результат в консоли";  
+</script>
+</body>
+</html>
