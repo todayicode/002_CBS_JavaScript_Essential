@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <title>005_lecture</title>
+    <style>
+        body {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-11">
+                <h2>Задание 1. </h2>
+                <p class="text-justify">Задание 1.
+                        Создать объект «Документ», в котором определить свойства «Заголовок, Тело, Футер, Дата». Создать в объекте вложенный объект – «Приложение». Создать в объекте «Приложение», вложенные объекты, «Заголовок, Тело, Футер, Дата». Создать методы для заполнения и отображения документа.
+                </p>
+                <h4>Выполнение</h4>
+                <p>
+                    Создан объект myDocument, который содержит в себе: 
+                    <ul>
+                        <li>свойства 'header', 'body', 'footer', 'date'</li>
+                        <li>объект 'application'</li>
+                        <li>метод addInfo() - добавляет / редактирует свойства объекта myDocument.application</li>
+                        <li>метод printInfo() - выводит информацию о свойствах и методах объекта myDocument</li>
+                    </ul> 
+                </p>
+                <pre><code>
+var myDocument = {
+    header: "document header",
+    body: "document body",
+    footer: "document footer",
+    date: "document date",
+    application: {
+        appHeader: 2,
+        appBody: "application body",
+        appFooter: "application footer",
+        appDate: "application date",
+        appObj: {}
+    },
+    addInfo: function(){
+        myDocument.application.appHeader = prompt('Заполните значение для свойства application header: ');
+        myDocument.application.appBody = prompt('Заполните значение для свойства application body: ');
+        myDocument.application.appFooter = prompt('Заполните значение для свойства application footer: ');
+        myDocument.application.appDate = prompt('Заполните значение для свойства application date: ');  
+    },
+    printInfo: function(){
+        for (var key in myDocument) {
+            if (typeof myDocument[key] === "object") {
+                for (var innerKey in myDocument[key]) {
+                    document.getElementById('script').innerHTML = ("Ключ: " + innerKey + ", значение: " + myDocument[key][innerKey] + " <br>" + "&lt;hr&gt;");
+                }
+            }
+            document.getElementById('script') = ("Ключ: " + key + ", значение: " + myDocument[key] + " <br>" + "&lt;hr&gt;");
+        }
+    }
+}               
+                </code></pre>
+            </div>
+            <div class="col-1">
+                    <a href="html/001_script.html" role="button" class="btn btn-primary btn-lg active" >Запустить код</a>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="../../index.html">Назад</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

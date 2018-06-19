@@ -1,28 +1,35 @@
-var documenty = {
-    header: "some header",
-    body: "body",
-    footer: "footer",
-    date: "today",
+var myDocument = {
+    header: "document header",
+    body: "document body",
+    footer: "document footer",
+    date: "document date",
     application: {
-        header_header: {},
-        body_body: {},
-        footer_footer: {},
-        date_date: {}
+        appHeader: 2,
+        appBody: "application body",
+        appFooter: "application footer",
+        appDate: "application date",
+        appObj: {}
     },
-    addValue: function(){
-        documenty.application.header_header = prompt('Заполните значение для свойства header_header: ');
-        documenty.application.body_body = prompt('Заполните значение для свойства body_body: ');
-        documenty.application.footer_fotter = prompt('Заполните значение для свойства footer_fotter: ');
-        documenty.application.date_date = prompt('Заполните значение для свойства date_date: ');  
-    } 
+    addInfo: function(){
+        myDocument.application.appHeader = prompt('Заполните значение для свойства application header: ');
+        myDocument.application.appBody = prompt('Заполните значение для свойства application body: ');
+        myDocument.application.appFooter = prompt('Заполните значение для свойства application footer: ');
+        myDocument.application.appDate = prompt('Заполните значение для свойства application date: ');  
+    },
+    printInfo: function(){
+        for (var key in myDocument) {
+            if (typeof myDocument[key] === "object") {
+                for (var innerKey in myDocument[key]) {
+                    document.write("Ключ: " + innerKey + ", <br>" + "Значение: " + myDocument[key][innerKey] + " <br>" +  "<br>");
+                }
+            }
+            document.write("Ключ: " + key + ", <br>"  +  "Значение: " + myDocument[key] + " <br>" +  "<br>");
+        }
+        document.write("<a href='001_script.html' role='button' class='btn btn-success btn-lg active'>Назад </a>");
+    }
+    
 }
 
-for (var key in documenty) {
-    if (typeof documenty[key] === "object") {
-        for (var innerKey in documenty[key]) {
-            document.write("Ключ: " + innerKey + ", значение: " + documenty[innerKey] + " <br>");
-        }
-    }
-    document.write("Ключ: " + key + ", значение: " + documenty[key] + " <br>");
-}
+
+
 
