@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<title>Calculator</title>
+	<style>
+			body {
+				margin-top: 100px;
+				background-color: rgb(246, 250, 237);
+			}
+
+			.container {
+				height: 400px;
+				width: 400px;
+				border: 2px solid black;
+				border-radius: 40px;
+			}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row d-flex justify-content-center mt-3">
+				<div class="col-5 d-flex justify-content-center mt-3">
+					<h2>Calculator</h2>
+				</div>
+		</div>
+		<div class="row d-flex justify-content-center mt-3">
+			<div class="col">
+				<input type="text"   name="result" id="result"  class="form-control-plaintext input-lg alert alert-primary" readonly>
+		</div>
+		</div>
+		
+		<div class="row d-flex justify-content-center mt-3">
+			<div class="col">
+				<input type="text"  id="number1" class="form-control input-lg alert-secondary" placeholder="введите число">
+			</div>
+		</div>
+		<div class="row d-flex justify-content-center mt-3">
+			<div class="col">
+				<input type="text"  id="number2"  class="form-control input-lg alert-secondary" placeholder="введите число">
+			</div>
+		</div>
+		<div class="row d-flex justify-content-center mt-4">
+			<div class="col d-flex justify-content-center">
+				<input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="plus" value="+" >
+				<input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="minus" value="-">
+				<input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="multiply" value="*">
+				<input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="divide" value="/">
+				<input type="button" class="btn btn-outline-danger btn-lg rounded-circle mr-3" id="reset" value="C">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var result;
+var a;
+var b;
+var number1 = document.getElementById("number1");
+var number2 = document.getElementById("number2");
+var equals = document.getElementById("result")
+
+function add() {
+	a = +number1.value;
+	b = +number2.value;
+	if (!isNaN(a)&&!isNaN(b)) {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-success');
+		equals.value = a + b;
+	}
+	else {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-danger');
+		equals.value = "ошибка ввода. необходимо вводить числа";
+	}
+}
+
+function sub() {
+	a = +number1.value;
+	b = +number2.value;
+	if (!isNaN(a)&&!isNaN(b)) {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-success');
+		equals.value = a - b;
+	}
+	else {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-danger');
+		return equals.value = "ошибка ввода. необходимо вводить числа";
+	}
+}
+
+function div() {
+	a = +number1.value;
+	b = +number2.value;
+	if (!isNaN(a)&&!isNaN(b)&&(b !== 0)) {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-success');
+		equals.value = a / b;
+	}
+	else if (b == 0) {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-danger');
+		return equals.value = "деление на ноль невозможно.";
+	}
+	else {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-danger');
+		return equals.value = "ошибка ввода. необходимо вводить числа";
+	}
+	
+}
+
+function mul() {
+	a = +number1.value;
+	b = +number2.value;
+	if (!isNaN(a)&&!isNaN(b)) {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-success');
+		equals.value = a * b;
+	}
+	else {
+		equals.classList.remove('alert-primary');
+		equals.classList.add('alert-danger');
+		return equals.value = "ошибка ввода. необходимо вводить числа";
+	}
+}
+
+function res() {
+	number1.value = ' ';
+	number2.value = ' ';
+	equals.value = ' ';
+	if (equals.classList.contains('alert-danger') ) {
+		equals.classList.remove('alert-danger');
+		equals.classList.add('alert-primary');
+	}
+	if (equals.classList.contains('alert-success') ) {
+		equals.classList.remove('alert-success');
+		equals.classList.add('alert-primary');
+	}
+}
+
+var plus = document.getElementById("plus");
+plus.onclick = add;
+
+var minus = document.getElementById("minus");
+minus.onclick = sub;
+
+var divide = document.getElementById("divide");
+divide.onclick = div;
+
+var multiply = document.getElementById("multiply");
+multiply.onclick = mul;
+
+var reset = document.getElementById("reset")
+reset.onclick = res;
+
+	</script>
+</body>
+</html>
