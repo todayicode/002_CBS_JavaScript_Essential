@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<title>Calculator</title>
+	<style>
+			body {
+				margin-top: 100px;
+				background-color: rgb(246, 250, 237);
+			}
+
+			.container {
+				height: 450px;
+				width: 400px;
+				border: 2px solid black;
+				border-radius: 40px;
+			}
+            .last__row {
+                padding: 0;
+                margin-left: -4px;
+            }
+            
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row d-flex justify-content-center mt-3">
+				<div class="col-5 d-flex justify-content-center mt-3">
+					<h2>Calculator</h2>
+				</div>
+		</div>
+		<div class="row d-flex justify-content-center mt-3">
+			<div class="col">
+				<input type="text"   name="result" id="result"  class="form-control-plaintext input-lg alert alert-primary" readonly>
+		</div>
+		</div>
+		
+		<div class="row d-flex justify-content-center mt-3">
+			<div class="col-7">
+				<input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="one" value="1" >
+				<input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="two" value="2">
+				<input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="three" value="3">               
+            </div>
+            <div class="col-5">
+                    <input type="button" class="btn btn-outline-danger btn-lg rounded-circle mr-3" id="reset" value="C">
+                    <input type="button" class="btn btn btn-outline-success btn-lg rounded-circle mr-3" id="equal" value="=">  
+            </div>
+			<div class="col-7 mt-3">
+                <input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="four" value="4">
+                <input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="five" value="5">
+                <input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="six" value="6">
+            </div>
+            <div class="col-5 mt-3">
+                <input type="button" class="btn btn-outline-success btn-lg rounded-circle mr-3" id="plus" value="+" >
+                <input type="button" class="btn btn-outline-success btn-lg rounded-circle" id="minus" value="-">   
+            </div>
+			<div class="col-7 mt-3">
+                <input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="seven" value="7">
+                <input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="eight" value="8">
+                <input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="nine" value="9">
+            </div>
+            <div class="col-5 mt-3">
+                <input type="button" class="btn btn-outline-success btn-lg rounded-circle  " id="divide" value="/">
+                <input type="button" class="btn btn-outline-success btn-lg rounded-circle ml-4 " id="multiply" value="*">     
+            </div>
+            <div class="col-7 mt-3 last__row">
+                <input type="button" class="btn btn-outline-secondary btn-lg rounded-circle mr-3" id="zero" value="0">
+            </div>
+                   
+            </div>
+	</div>
+	<script type="text/javascript">
+//переменные
+var result;
+var a;
+var b;
+var inputOutput = document.getElementById("result")
+var operand;
+var totalOne = '';
+// объект - переводим строковой знак операции в функцию
+var operators = {
+    '+': function(a,b) {return a + b},
+    '-': function(a,b) {return a - b},
+    '/': function(a,b) {return a / b},
+    '*': function(a,b) {return a * b},
+}
+// вызов функций
+var plus = document.getElementById("plus");
+plus.onclick = add;
+
+var minus = document.getElementById("minus");
+minus.onclick = sub;
+
+var multiply = document.getElementById("multiply");
+multiply.onclick = mul;
+
+var divide = document.getElementById("divide");
+divide.onclick = div;
+
+var reset = document.getElementById("reset")
+reset.onclick = res;
+
+var equal = document.getElementById("equal")
+equal.onclick = execute;
+
+// блок математических операций
+function add() {
+	a = +inputOutput.value;
+    totalOne = '';
+    inputOutput.value = "";
+    operand = String(document.getElementById("plus").value);
+}
+
+function sub() {
+	a = +inputOutput.value;
+    totalOne = '';
+    inputOutput.value = "";
+    operand = String(document.getElementById("minus").value);
+}
+
+function mul() {
+	a = +inputOutput.value;
+    totalOne = '';
+    inputOutput.value = "";
+    operand = String(document.getElementById("multiply").value);
+}
+
+function div() {
+	a = +inputOutput.value;
+    totalOne = '';
+    inputOutput.value = "";
+    operand = String(document.getElementById("divide").value);
+}
+
+var final;
+function execute() {
+	b = +inputOutput.value;
+    if (operand == '/') {
+        if (b == 0) {
+        inputOutput.classList.remove('alert-primary');
+		inputOutput.classList.add('alert-danger');
+		return inputOutput.value = "деление на ноль невозможно.";
+        }
+    }
+    final = operators[operand](a,b);
+    inputOutput.value = final;
+}
+
+// добавление цифры в строку
+var one = document.getElementById("one")
+one.onclick = addOne;
+var two = document.getElementById("two")
+two.onclick = addTwo;
+var three = document.getElementById("three")
+three.onclick = addThree;
+var four = document.getElementById("four")
+four.onclick = addFour;
+var five = document.getElementById("five")
+five.onclick = addFive;
+var six = document.getElementById("six")
+six.onclick = addSix;
+var seven = document.getElementById("seven")
+seven.onclick = addSeven;
+var eight = document.getElementById("eight")
+eight.onclick = addEight;
+var nine = document.getElementById("nine")
+nine.onclick = addNine;
+var zero = document.getElementById("zero")
+zero.onclick = addZero;
+
+function addOne() {
+    inputOutput.value = totalOne + 1; 
+    totalOne = inputOutput.value;
+}
+
+function addTwo() {
+    inputOutput.value = totalOne + 2; 
+    totalOne = inputOutput.value;
+}
+
+function addThree() {
+    inputOutput.value = totalOne + 3; 
+    totalOne = inputOutput.value;
+}
+
+function addFour() {
+    inputOutput.value = totalOne + 4; 
+    totalOne = inputOutput.value;
+}
+
+function addFive() {
+    inputOutput.value = totalOne + 5; 
+    totalOne = inputOutput.value;
+}
+
+function addSix() {
+    inputOutput.value = totalOne + 6; 
+    totalOne = inputOutput.value;
+}
+
+function addSeven() {
+    inputOutput.value = totalOne + 7; 
+    totalOne = inputOutput.value;
+}
+
+function addEight() {
+    inputOutput.value = totalOne + 8; 
+    totalOne = inputOutput.value;
+}
+
+function addNine() {
+    inputOutput.value = totalOne + 9; 
+    totalOne = inputOutput.value;
+}
+
+function addZero() {
+    inputOutput.value = totalOne + 0; 
+    totalOne = inputOutput.value;
+}
+
+// функция под кнопку reset
+function res() {
+	inputOutput.value = ' ';
+    totalOne = '';
+	if (inputOutput.classList.contains('alert-danger') ) {
+		inputOutput.classList.remove('alert-danger');
+		inputOutput.classList.add('alert-primary');
+	}
+	if (inputOutput.classList.contains('alert-success') ) {
+		inputOutput.classList.remove('alert-success');
+		inputOutput.classList.add('alert-primary');
+	}
+}
+	</script>
+</body>
+</html>
