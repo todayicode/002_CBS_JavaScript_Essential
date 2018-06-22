@@ -9,168 +9,229 @@
 	
 	<div class="container">
 		<div class="row d-flex content-justify-center ">
-			<div class="col col-md-10 text-justify mt-4">
+			<div class="col col-md-4 text-justify mt-4  border border-primary rounded">
 				<h3>Вопрос 1</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label1"><input type="radio" name="question1" value="1"> Lorem ipsum dolor sit ais eligendi? Voluptas a dolore perferendis ct. ответ 1 +</label> <br>
-				<label name="label1"><input type="radio" name="question1" value="2"> ответ 2 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="3"> ответ 3 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button1">ответить</button><br> 
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+					<pre>
+						<code>
+function func(y) {
+	var x = 20;
+	return x - y;
+}
+document.write(func(4));
+						</code>
+					</pre>
+				<label name="label1"><input type="radio" name="answer1" value="1"> 20 </label> <br>
+				<label name="label1"><input type="radio" name="answer1" value="2"> 16 </label><br>
+				<label name="label1"><input type="radio" name="answer1" value="3"> 24 </label><br>
+				<label name="label1"><input type="radio" name="answer1" value="4"> 4 </label><br><br>
+				<button class="btn btn-primary" id="button1" onclick="check(1)">ответить</button><br> 
+				 
 			</div>
 		</div>
 		<div class="row">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 2</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label2"><input type="radio" name="question2" value="1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit delectus hic accusantium nemo voluptatibus sed nulla dignissimos consectetur illum quod at, consequatur expedita placeat cupiditate quibusdam quos rerum? Unde. ответ 1 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="2"> ответ 2 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="3"> ответ 3 + </label><br>
-				<label name="label2"><input type="radio" name="question2" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button2">ответить</button><br> <br>
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+				<pre><code>
+var z = false &amp;&amp; true;
+document.write(!(z !== true))
+				</code></pre>
+				<label name="label2"><input type="radio" name="answer2" value="1"> false </label><br>
+				<label name="label2"><input type="radio" name="answer2" value="2"> true </label><br>
+				<label name="label2"><input type="radio" name="answer2" value="3"> undefined </label><br>
+				<label name="label2"><input type="radio" name="answer2" value="4"> null </label><br><br>
+				<button class="btn btn-primary" id="button2" onclick="check(2)">ответить</button><br> <br>
+				 
 			</div>
 		</div>
 		<div class="row ">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 3</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label1"><input type="radio" name="question1" value="1"> Lorem ipsum dolor sit ais eligendi? Voluptas a dolore perferendis ct. ответ 1 +</label> <br>
-				<label name="label1"><input type="radio" name="question1" value="2"> ответ 2 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="3"> ответ 3 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button1">ответить</button><br> 
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+				<pre><code>
+console.log(1 || 2);
+console.log(2 || 1);
+console.log(0 || 1);
+				</code></pre>
+				<label name="label3"><input type="radio" name="answer3" value="1"> 1 2 1</label> <br>
+				<label name="label3"><input type="radio" name="answer3" value="2"> 1 2 0 </label><br>
+				<label name="label3"><input type="radio" name="answer3" value="3"> 2 1 1 </label><br>
+				<label name="label3"><input type="radio" name="answer3" value="4"> 2 1 0</label><br><br>
+				<button class="btn btn-primary" id="button3" onclick="check(3)">ответить</button><br> 
+				 
 			</div>
 		</div>
 		<div class="row">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 4</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label2"><input type="radio" name="question2" value="1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit delectus hic accusantium nemo voluptatibus sed nulla dignissimos consectetur illum quod at, consequatur expedita placeat cupiditate quibusdam quos rerum? Unde. ответ 1 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="2"> ответ 2 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="3"> ответ 3 + </label><br>
-				<label name="label2"><input type="radio" name="question2" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button2">ответить</button><br> <br>
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+					<pre><code>
+var i = 0;
+var a = {
+	['try' + ++i]: i + 1,
+	['try' + ++i]: i + 2,
+}
+console.log(a.try1);
+console.log(a.try2);
+					</code></pre>
+				<label name="label4"><input type="radio" name="answer4" value="1"> 1 2 </label><br>
+				<label name="label4"><input type="radio" name="answer4" value="2"> 2 5 </label><br>
+				<!-- правильный ответ 2 4  -->
+				<label name="label4"><input type="radio" name="answer4" value="3"> 2 4</label><br>
+				<label name="label4"><input type="radio" name="answer4" value="4"> 4 2 </label><br><br>
+				<button class="btn btn-primary" id="button4" onclick="check(4)">ответить</button><br> <br>
+				 
 			</div>
 		</div>
 		<div class="row ">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 5</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label1"><input type="radio" name="question1" value="1"> Lorem ipsum dolor sit ais eligendi? Voluptas a dolore perferendis ct. ответ 1 +</label> <br>
-				<label name="label1"><input type="radio" name="question1" value="2"> ответ 2 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="3"> ответ 3 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button1">ответить</button><br> 
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+					<pre><code>
+var count = 0;
+for (var i = 0; i &lt;= 6; i++) {
+	if (i == 3) {
+		i = 5;
+		continue;
+	}
+	count++;
+}
+document.write(count);
+					</code></pre>
+				<label name="label5"><input type="radio" name="answer5" value="1"> 3</label> <br>
+				<!-- правильный ответ 4 -->
+				<label name="label5"><input type="radio" name="answer5" value="2"> 4 </label><br> 
+				<label name="label5"><input type="radio" name="answer5" value="3"> 5 </label><br>
+				<label name="label5"><input type="radio" name="answer5" value="4"> 6 </label><br><br>
+				<button class="btn btn-primary" id="button5" onclick="check(5)">ответить</button><br> 
+				 
 			</div>
 		</div>
 		<div class="row">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 6</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label2"><input type="radio" name="question2" value="1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit delectus hic accusantium nemo voluptatibus sed nulla dignissimos consectetur illum quod at, consequatur expedita placeat cupiditate quibusdam quos rerum? Unde. ответ 1 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="2"> ответ 2 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="3"> ответ 3 + </label><br>
-				<label name="label2"><input type="radio" name="question2" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button2">ответить</button><br> <br>
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+				<pre><code>
+var i = 0;
+do {
+	i++;
+}
+while(i&lt;5);
+document.write(i);
+				</code></pre>
+				<label name="label6"><input type="radio" name="answer6" value="1"> 0 </label><br>
+				<label name="label6"><input type="radio" name="answer6" value="2"> 4 </label><br>
+				<label name="label6"><input type="radio" name="answer6" value="3"> 5 </label><br>
+				<label name="label6"><input type="radio" name="answer6" value="4"> 6 </label><br><br>
+				<button class="btn btn-primary" id="button6" onclick="check(6)">ответить</button><br> <br>
+				 
 			</div>
 		</div>
 		<div class="row ">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 7</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label1"><input type="radio" name="question1" value="1"> Lorem ipsum dolor sit ais eligendi? Voluptas a dolore perferendis ct. ответ 1 +</label> <br>
-				<label name="label1"><input type="radio" name="question1" value="2"> ответ 2 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="3"> ответ 3 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button1">ответить</button><br> 
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+				<pre><code>
+function x(a, b = 5, c = 6, d = 10) {
+	return a + b - d;
+}
+document.write(x(30, 20));
+				</code></pre>
+				<label name="label7"><input type="radio" name="answer7" value="1"> 0 </label> <br>
+				<label name="label7"><input type="radio" name="answer7" value="2"> 20 </label><br>
+				<label name="label7"><input type="radio" name="answer7" value="3"> 30 </label><br>
+				<label name="label7"><input type="radio" name="answer7" value="4"> 40</label><br><br>
+				<button class="btn btn-primary" id="button7" onclick="check(7)">ответить</button><br> 
+				 
 			</div>
 		</div>
 		<div class="row">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 8</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label2"><input type="radio" name="question2" value="1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit delectus hic accusantium nemo voluptatibus sed nulla dignissimos consectetur illum quod at, consequatur expedita placeat cupiditate quibusdam quos rerum? Unde. ответ 1 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="2"> ответ 2 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="3"> ответ 3 + </label><br>
-				<label name="label2"><input type="radio" name="question2" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button2">ответить</button><br> <br>
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+				<pre><code>
+var x = 2;
+var y = x != 5;
+if (x != 2) {
+	alert(y);
+}
+else if (y &amp;&amp; (typeof x == "number")) {
+	alert(1 + 1);
+}
+else {
+	alert(10-x)
+}
+				</code></pre>
+				<label name="label8"><input type="radio" name="answer8" value="1"> 2 </label><br>
+				<label name="label8"><input type="radio" name="answer8" value="2"> 5 </label><br>
+				<label name="label8"><input type="radio" name="answer8" value="3"> 8 </label><br>
+				<label name="label8"><input type="radio" name="answer8" value="4"> undefined </label><br><br>
+				<button class="btn btn-primary" id="button8" onclick="check(8)">ответить</button><br> <br>
+				 
 			</div>
 		</div>
 		<div class="row ">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 9</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label1"><input type="radio" name="question1" value="1"> Lorem ipsum dolor sit ais eligendi? Voluptas a dolore perferendis ct. ответ 1 +</label> <br>
-				<label name="label1"><input type="radio" name="question1" value="2"> ответ 2 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="3"> ответ 3 - </label><br>
-				<label name="label1"><input type="radio" name="question1" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button1">ответить</button><br> 
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+				<pre><code>
+var x = 6;
+var y = 0;
+while(x &gt; 0 &amp;&amp; y &lt; 6) {
+	x--;
+	y += x;
+}
+document.write(y);
+				</code></pre>
+				<label name="label9"><input type="radio" name="answer9" value="1"> 6 </label> <br>
+				<label name="label9"><input type="radio" name="answer9" value="2"> 3 </label><br>
+				<label name="label9"><input type="radio" name="answer9" value="3"> 9 </label><br>
+				<label name="label9"><input type="radio" name="answer9" value="4"> 0 </label><br><br>
+				<button class="btn btn-primary" id="button9" onclick="check(9)">ответить</button><br> 
+				 
 			</div>
 		</div>
 		<div class="row">
 			<div class="col col-md-10 text-justify">
 				<h3>Вопрос 10</h3>
-				<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae sapiente! Tempore, aliquam beatae quo, quam eligendi veniam iste tempora blanditiis recusandae illum numquam, nesciunt quibusdam quidem harum? Corporis, unde?</h5>
-				<label name="label2"><input type="radio" name="question2" value="1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit delectus hic accusantium nemo voluptatibus sed nulla dignissimos consectetur illum quod at, consequatur expedita placeat cupiditate quibusdam quos rerum? Unde. ответ 1 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="2"> ответ 2 - </label><br>
-				<label name="label2"><input type="radio" name="question2" value="3"> ответ 3 + </label><br>
-				<label name="label2"><input type="radio" name="question2" value="4"> ответ 4 - </label><br><br>
-				<button class="btn btn-primary" id="button2">ответить</button><br> <br>
-                <button class="btn btn-success" id="buttonFinish">Закончить тест</button>
-				<hr>
+				<h5>Какой результат этого кода?</h5>
+				<pre><code>
+var x = 20 + 30 + 10 + "5";
+console.log(x);
+				</code></pre>
+				<label name="label10"><input type="radio" name="answer10" value="1"> 65 </label><br>
+				<label name="label10"><input type="radio" name="answer10" value="2"> 2030105 </label><br>
+				<label name="label10"><input type="radio" name="answer10" value="3"> 605 </label><br>
+				<label name="label10"><input type="radio" name="answer10" value="4"> undefined </label><br><br>
+				<button class="btn btn-primary" id="button10" onclick="check(10)">ответить</button><br> <br>
+                <button class="btn btn-success" id="buttonFinish" >Закончить тест</button>
+				 
 			</div>
 		</div>
 	</div>
 	<script>
-		var correctAnswers = [1, 3]; // correct answers array
-		var totalCorrectAnswers; // total correct answers
+		var correctAnswers = [2, 1, 1, 3, 2, 3, 4, 1, 3, 3]; // correct answers array
 		var userAnswers = []; // user generated answers
 		var rightCounter = 0; // correct answers counter
 		var wrongCounter = 0; // wrong answers counter
-		var button1 = document.getElementById("button1"); // button 1
-		var buttonFinish = document.getElementById("buttonFinish"); // button 1
-		var answers1 = document.getElementsByName("question1"); // answers array to the first question
-		var answers2 = document.getElementsByName("question2"); // answers array to the first question
-		var label1 = document.getElementsByName("label1");
-		var label2 = document.getElementsByName("label2");
+		var buttonFinish = document.getElementById("buttonFinish"); 
 		var questionCounter = 0; // контроль номера вопроса для верной записи в массив ответов пользователя. 
 
-		button1.onclick = function() {
-			questionCounter = 1;
-			for (var i = 0; i < answers1.length; i++) {
-				answers1[i].setAttribute('disabled', 'true');
-				if (answers1[i].checked) {
-					userAnswers[(questionCounter - 1)] = answers1[i].value;	
+		function check(n) {
+			questionCounter = n;
+			var answers = document.getElementsByName("answer"+n);
+			for (var i = 0; i < answers.length; i++) {
+				answers[i].setAttribute('disabled', 'true');
+				if (answers[i].checked) {
+					userAnswers[(questionCounter - 1)] = answers[i].value;	
 				}
 			}
-			button1.innerHTML = "Ответ принят";
-			button1.classList.remove('btn-primary');
-			button1.classList.add('disabled');
-
+			window["button" + n].innerHTML = "Ответ принят";
+			window["button" + n].classList.remove('btn-primary');
+			window["button" + n].classList.add('disabled');
 		}
 
-		button2.onclick = function() {
-			questionCounter = 2;
-			for (var i = 0; i < answers2.length; i++) {
-				answers2[i].setAttribute('disabled', 'true');
-				if (answers2[i].checked) {
-					userAnswers[(questionCounter - 1)] = answers1[i].value;	
-				}
-			}
-			button2.innerHTML = "Ответ принят";
-			button2.classList.remove('btn-primary');
-			button2.classList.add('disabled');
-
-		}
 		buttonFinish.onclick = function() {
 			for (i = 0; i < correctAnswers.length; i++) {
 				if (correctAnswers[i] == userAnswers[i]) {
@@ -181,12 +242,12 @@
 				}
 			}
 			for (i = 0; i < correctAnswers.length; i++) {
-				// label1[0].setAttribute('class', 'bg-success');
-				// var coransw = "label"+ (i+1);
-				// alert(coransw);
+				window[("label"+ (i+1))] = document.getElementsByName("label"+ (i+1));
 				window[("label"+ (i+1))][(correctAnswers[i]-1)].setAttribute('class', 'bg-success');
 			}
-			alert('Правильных ответов: ' + rightCounter + "\n" + 'Неправильных ответов: ' + wrongCounter);
+			alert('Правильных ответов: ' + rightCounter + "\n" + 'Неправильных ответов: ' + wrongCounter + "\n" + "Правильные ответы выделены зеленым маркером.");
+			rightCounter = 0;
+			wrongCounter = 0;
 		}
 	</script>
 </body>
