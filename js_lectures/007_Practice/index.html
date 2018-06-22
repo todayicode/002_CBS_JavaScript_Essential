@@ -4,23 +4,30 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<style>
+		h3, h5 {
+			text-align: center;
+			margin-bottom: 20px;
+			margin-top: 10px;
+		}
+	</style>
 </head>
 <body>
 	
 	<div class="container">
 		<div class="row d-flex content-justify-center ">
-			<div class="col col-md-4 text-justify mt-4  border border-primary rounded">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 1</h3>
 				<h5>Какой результат этого кода?</h5>
-					<pre>
-						<code>
+<pre>
+<code>
 function func(y) {
 	var x = 20;
 	return x - y;
 }
 document.write(func(4));
-						</code>
-					</pre>
+</code>
+</pre>
 				<label name="label1"><input type="radio" name="answer1" value="1"> 20 </label> <br>
 				<label name="label1"><input type="radio" name="answer1" value="2"> 16 </label><br>
 				<label name="label1"><input type="radio" name="answer1" value="3"> 24 </label><br>
@@ -28,15 +35,13 @@ document.write(func(4));
 				<button class="btn btn-primary" id="button1" onclick="check(1)">ответить</button><br> 
 				 
 			</div>
-		</div>
-		<div class="row">
-			<div class="col col-md-10 text-justify">
-				<h3>Вопрос 2</h3>
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
+				<h3 >Вопрос 2</h3>
 				<h5>Какой результат этого кода?</h5>
-				<pre><code>
+<pre><code>
 var z = false &amp;&amp; true;
 document.write(!(z !== true))
-				</code></pre>
+</code></pre>
 				<label name="label2"><input type="radio" name="answer2" value="1"> false </label><br>
 				<label name="label2"><input type="radio" name="answer2" value="2"> true </label><br>
 				<label name="label2"><input type="radio" name="answer2" value="3"> undefined </label><br>
@@ -44,9 +49,7 @@ document.write(!(z !== true))
 				<button class="btn btn-primary" id="button2" onclick="check(2)">ответить</button><br> <br>
 				 
 			</div>
-		</div>
-		<div class="row ">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 3</h3>
 				<h5>Какой результат этого кода?</h5>
 				<pre><code>
@@ -61,9 +64,7 @@ console.log(0 || 1);
 				<button class="btn btn-primary" id="button3" onclick="check(3)">ответить</button><br> 
 				 
 			</div>
-		</div>
-		<div class="row">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 4</h3>
 				<h5>Какой результат этого кода?</h5>
 					<pre><code>
@@ -83,9 +84,7 @@ console.log(a.try2);
 				<button class="btn btn-primary" id="button4" onclick="check(4)">ответить</button><br> <br>
 				 
 			</div>
-		</div>
-		<div class="row ">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 5</h3>
 				<h5>Какой результат этого кода?</h5>
 					<pre><code>
@@ -107,9 +106,7 @@ document.write(count);
 				<button class="btn btn-primary" id="button5" onclick="check(5)">ответить</button><br> 
 				 
 			</div>
-		</div>
-		<div class="row">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 6</h3>
 				<h5>Какой результат этого кода?</h5>
 				<pre><code>
@@ -127,9 +124,7 @@ document.write(i);
 				<button class="btn btn-primary" id="button6" onclick="check(6)">ответить</button><br> <br>
 				 
 			</div>
-		</div>
-		<div class="row ">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 7</h3>
 				<h5>Какой результат этого кода?</h5>
 				<pre><code>
@@ -145,9 +140,7 @@ document.write(x(30, 20));
 				<button class="btn btn-primary" id="button7" onclick="check(7)">ответить</button><br> 
 				 
 			</div>
-		</div>
-		<div class="row">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 8</h3>
 				<h5>Какой результат этого кода?</h5>
 				<pre><code>
@@ -170,9 +163,7 @@ else {
 				<button class="btn btn-primary" id="button8" onclick="check(8)">ответить</button><br> <br>
 				 
 			</div>
-		</div>
-		<div class="row ">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 9</h3>
 				<h5>Какой результат этого кода?</h5>
 				<pre><code>
@@ -191,9 +182,7 @@ document.write(y);
 				<button class="btn btn-primary" id="button9" onclick="check(9)">ответить</button><br> 
 				 
 			</div>
-		</div>
-		<div class="row">
-			<div class="col col-md-10 text-justify">
+			<div class="col col-md-4 text-justify mt-4 mr-4 border border-primary rounded">
 				<h3>Вопрос 10</h3>
 				<h5>Какой результат этого кода?</h5>
 				<pre><code>
